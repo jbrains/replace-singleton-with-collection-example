@@ -2,6 +2,7 @@ package com.adaptionsoft.games.uglytrivia;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Game {
     ArrayList players = new ArrayList();
@@ -35,7 +36,8 @@ public class Game {
 	}
 
 	public boolean add(String legacy_playerName) {
-	    players.add(List.of(legacy_playerName).get(0));
+		final String playerName = List.of(legacy_playerName).get(0);
+		players.add(playerName);
 	    places[howManyPlayers()] = 0;
 	    purses[howManyPlayers()] = 0;
 	    inPenaltyBox[howManyPlayers()] = false;
