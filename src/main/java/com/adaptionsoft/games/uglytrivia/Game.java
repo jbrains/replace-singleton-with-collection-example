@@ -35,8 +35,8 @@ public class Game {
 		return (howManyPlayers() >= 2);
 	}
 
-	public boolean add(String legacy_playerName) {
-		final String playerName = List.of(legacy_playerName).get(0);
+	public boolean add(List<String> playerNameParts) {
+		final String playerName = playerNameParts.get(0);
 		players.add(playerName);
 	    places[howManyPlayers()] = 0;
 	    purses[howManyPlayers()] = 0;
