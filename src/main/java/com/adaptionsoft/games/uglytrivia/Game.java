@@ -36,12 +36,13 @@ public class Game {
 	}
 
 	public boolean add(List<String> playerNameParts) {
-	    players.add(playerNameParts.get(0));
+		final String playerName = playerNameParts.get(0);
+		players.add(playerName);
 	    places[howManyPlayers()] = 0;
 	    purses[howManyPlayers()] = 0;
 	    inPenaltyBox[howManyPlayers()] = false;
 	    
-	    System.out.println(playerNameParts.get(0) + " was added");
+	    System.out.println(playerName + " was added");
 	    System.out.println("They are player number " + players.size());
 		return true;
 	}
