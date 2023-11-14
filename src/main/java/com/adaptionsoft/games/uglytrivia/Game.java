@@ -34,13 +34,13 @@ public class Game {
 		return (howManyPlayers() >= 2);
 	}
 
-	public boolean add(String playerName) {
-	    players.add(playerName);
+	public boolean add(String legacy_playerName) {
+	    players.add(legacy_playerName);
 	    places[howManyPlayers()] = 0;
 	    purses[howManyPlayers()] = 0;
 	    inPenaltyBox[howManyPlayers()] = false;
 	    
-	    System.out.println(playerName + " was added");
+	    System.out.println(legacy_playerName + " was added");
 	    System.out.println("They are player number " + players.size());
 		return true;
 	}
