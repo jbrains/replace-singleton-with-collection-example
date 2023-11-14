@@ -13,9 +13,9 @@ public class GameRunner {
 	public static void main(String[] args) {
 		Game aGame = new Game();
 		
-		aGame.add(List.of("Chet"));
-		aGame.add(List.of("Pat"));
-		aGame.add(List.of("Sue"));
+		aGame.add(List.of("Chet", "Hendrickson"));
+		aGame.add(List.of("Pat", "Welsh"));
+		aGame.add(List.of("Sue", "Hendrickson"));
 		
 		Random rand = new Random();
 	
