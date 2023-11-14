@@ -1,8 +1,10 @@
 package com.adaptionsoft.games.uglytrivia;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Game {
     ArrayList players = new ArrayList();
@@ -36,7 +38,7 @@ public class Game {
 	}
 
 	public boolean add(List<String> playerNameParts) {
-		final String playerName = playerNameParts.get(0);
+		final String playerName = playerNameParts.stream().collect(Collectors.joining(" "));
 		players.add(playerName);
 	    places[howManyPlayers()] = 0;
 	    purses[howManyPlayers()] = 0;
