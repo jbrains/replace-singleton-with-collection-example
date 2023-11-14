@@ -35,7 +35,7 @@ public class Game {
 	}
 
 	public boolean add(String legacy_playerName) {
-	    players.add(legacy_playerName);
+	    players.add(List.of(legacy_playerName).get(0));
 	    places[howManyPlayers()] = 0;
 	    purses[howManyPlayers()] = 0;
 	    inPenaltyBox[howManyPlayers()] = false;
